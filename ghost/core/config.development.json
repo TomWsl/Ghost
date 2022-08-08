@@ -1,9 +1,10 @@
 {
     "enableDeveloperExperiments": true,
-	"server": {
-		"port": 9001,
+	"url": "http://test.printingcenterusa.com/blog",
+	  "server": {
+		"port": 8002,
 		"host": "0.0.0.0"
-	},
+	  },
 	"storage": {
         "active": "ghost-storage-cloudinary",
         "ghost-storage-cloudinary": {

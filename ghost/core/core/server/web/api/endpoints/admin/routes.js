@@ -6,6 +6,10 @@ const mw = require('./middleware');
 
 const shared = require('../../../shared');
 
+//Custom Controller
+const gTagController = require('../../../../../server/custom/controllers/gTagController');
+const uploadImageController = require('../../../../../server/custom/controllers/uploadImageController');
+
 module.exports = function apiRoutes() {
     const router = express.Router('admin api');
 
@@ -314,5 +318,12 @@ module.exports = function apiRoutes() {
     router.put('/newsletters/verifications/', mw.authAdminApi, http(api.newsletters.verifyPropertyUpdate));
     router.put('/newsletters/:id', mw.authAdminApi, http(api.newsletters.edit));
 
+//Custom Routes
+	  router.post('/gTag', mw.authAdminApi, gTagController.pushGTag);
+	  router.get('/getGTag', mw.authAdminApi, gTagController.get);
+	  router.get('/getCtaList', mw.authAdminApi, gTagController.getCtaList);
+	  router.get('/getCta', mw.authAdminApi, gTagController.getCta);
+	  router.post('/upload_image', mw.authAdminApi, uploadImageController.create);
+	  router.post('/delete_image', mw.authAdminApi, uploadImageController.delete);
     return router;
 };

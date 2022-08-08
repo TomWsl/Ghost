@@ -122,6 +122,11 @@ module.exports = function (defaults) {
         'ember-promise-modals': {
             excludeCSS: true
         },
+		'ember-froala-editor': {
+			//languages: ['es','fr','de'],
+			plugins  : [ 'align', 'code_view', 'colors', 'embedly', 'emoticons', 'entities', 'font_family', 'font_size', 'image', 'line_breaker', 'line_height', 'link', 'lists', 'paragraph_format', 'quick_insert', 'quote', 'special_characters', 'table', 'url', 'word_paste' ],
+			themes   : ['royal']
+		},
         outputPaths: {
             app: {
                 js: 'assets/ghost.js',

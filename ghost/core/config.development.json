@@ -1,3 +1,30 @@
 {
-    "enableDeveloperExperiments": true
+    "enableDeveloperExperiments": true,
+	"server": {
+		"port": 9001,
+		"host": "0.0.0.0"
+	},
+	"storage": {
+        "active": "ghost-storage-cloudinary",
+        "ghost-storage-cloudinary": {
+            "useDatedFolder": false,
+            "auth": {
+                "cloud_name": "printingcenterusa-com",
+                "api_key": "621892171441524",
+                "api_secret": "5WkvNBxkwjPe7TX4bym3GidxH68"
+            },
+            "upload": {
+                "use_filename": true,
+                "unique_filename": false,
+                "overwrite": false,
+                "folder": "blog-ghost",
+                "tags": ["blog"]
+            },
+            "fetch": {
+                "quality": "auto",
+                "secure": true,
+                "cdn_subdomain": true
+            }
+        }
+    }
 }

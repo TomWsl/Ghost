@@ -36,6 +36,12 @@
                     </div>
 
                     <section class="flex items-center pe-auto h-100">
+					{{#if this._showHtmlEditorToolbar}}
+						<button class="gh-btn gh-btn-editor" {{on "click" this._toggleHTMLToolBar}}>Hide ToolBar</button>					
+					 {{else}}
+						<button class="gh-btn gh-btn-editor" {{on "click" this._toggleHTMLToolBar}}>Show ToolBar</button>
+					 {{/if}}
+						
                         {{#unless this.post.isNew}}
                             <Editor::PublishButtons @publishManagement={{publishManagement}} />
 

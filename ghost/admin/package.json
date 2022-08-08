@@ -98,6 +98,7 @@
     "ember-exam": "6.0.1",
     "ember-export-application-global": "2.0.1",
     "ember-fetch": "8.1.1",
+    "ember-froala-editor": "^4.0.13",
     "ember-in-viewport": "4.0.2",
     "ember-infinity": "2.3.0",
     "ember-keyboard": "8.2.0",
@@ -175,6 +176,8 @@
   },
   "dependencies": {
     "path-browserify": "1.0.1",
-    "webpack": "5.74.0"
+    "webpack": "5.74.0",
+	 "axios": "^0.21.1"
+    
   }
 }

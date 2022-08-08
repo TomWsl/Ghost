@@ -121,6 +121,7 @@ export default class EditorController extends Controller {
     _leaveConfirmed = false;
     _previousTagNames = null; // set by setPost and _postSaved, used in hasDirtyAttributes
 
+	_showHtmlEditorToolbar = false;
     /* computed properties ---------------------------------------------------*/
 
     @alias('model')
@@ -1091,4 +1092,16 @@ export default class EditorController extends Controller {
 
         notifications.showAlert(message, {type: 'error', delayed: delay, key: 'post.save'});
     }
+	
+	@action
+	_toggleHTMLToolBar(){
+		debugger;
+		this.set('_showHtmlEditorToolbar', !this._showHtmlEditorToolbar);
+		if(this._showHtmlEditorToolbar){
+			$('.gh-koenig-editor-pane').addClass('show-froala-toolbar');
+		}else{
+			$('.gh-koenig-editor-pane').removeClass('show-froala-toolbar');
+		}
+		
+	}
 }

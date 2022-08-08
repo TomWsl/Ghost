@@ -59,8 +59,11 @@ export default class KoenigCardHtml extends Component {
         let payload = this.payload || {};
 
         // CodeMirror errors on a `null` or `undefined` value
-        if (!payload.html) {
-            set(payload, 'html', '');
+         if (!payload.html) {
+            //set(payload, 'html', '');
+		    //Begin FroalaEdito customize 
+			set(payload, 'html', '<p></p>');
+			//End  FroalaEdito customize 
         }
 
         this.set('payload', payload);
@@ -70,6 +73,13 @@ export default class KoenigCardHtml extends Component {
 
     @action
     updateHtml(html) {
+			 //Begin FroalaEdito customize 
+        if (html.string) {
+            html = html.string;
+        }else{
+            html = '<p></p>';
+        }
+        //End  FroalaEdito customize 
         this._updatePayloadAttr('html', html);
     }
 

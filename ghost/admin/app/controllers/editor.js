@@ -903,6 +903,7 @@ export default class EditorController extends Controller {
 
         this._previousTagNames = [];
         this._leaveConfirmed = false;
+		this._showHtmlEditorToolbar = false;
 
         this.set('post', null);
         this.set('hasDirtyAttributes', false);
@@ -913,6 +914,7 @@ export default class EditorController extends Controller {
         // remove the onbeforeunload handler as it's only relevant whilst on
         // the editor route
         window.onbeforeunload = null;
+
     }
 
     /* Private tasks ---------------------------------------------------------*/
@@ -1095,7 +1097,6 @@ export default class EditorController extends Controller {
 	
 	@action
 	_toggleHTMLToolBar(){
-		debugger;
 		this.set('_showHtmlEditorToolbar', !this._showHtmlEditorToolbar);
 		if(this._showHtmlEditorToolbar){
 			$('.gh-koenig-editor-pane').addClass('show-froala-toolbar');

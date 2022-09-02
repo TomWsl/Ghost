@@ -1272,3 +1272,14 @@
 {
 	/*display:block;*/
 }
+
+.gh-koenig-editor-pane.show-froala-toolbar .fr-wrapper
+{
+	max-height:600px;
+	overflow-y:auto;
+}
+
+.koenig-editor
+{
+	max-width:817px !important;
+}

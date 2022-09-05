@@ -9,6 +9,7 @@ export default class FroalaEditor extends FroalaEditorComponent {
         toolbarInline: false,
         pastePlain: true,
 		toolbarSticky:false,
+		fontSize:['8','9','10','11','12','13','14','15','16','17','18','19','20','24','30','36','48','60','72','96'],
         toolbarButtons: {
             // Key represents the more button from the toolbar.
             moreText: {
